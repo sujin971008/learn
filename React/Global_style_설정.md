@@ -3,14 +3,14 @@ styled components에서 각 componet에 동일한 스타일을 부여하고 싶�
 (라우터를 설정해주는 부분에서 GlobalStyle을 불러와 적용 )
 
 ## Step1 -- 패키지설치 
-yarn add styled-reset styled-components
-또는 npm install styled-reset styled-components
+yarn add  styled-components
+또는 npm install styled-components
 
 ## Step2
 styled-components는 따로 동작하기 때문에 Global.js 파일을 생성해서 관리한다.
 ### src/styles/GlobalStyle.js
 ```js
-import { createGlobalStyles } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -23,7 +23,7 @@ margin: 0;
 }
 `; 
 
-export default GlobalStyles;
+export default GlobalStyle;
 ```
 ### App.js
 ```js
@@ -33,7 +33,7 @@ import Section from "./pages/section";
 import Footer from "./component/footer";
 import Meta from "./Meta";
 import styled from 'styled-components';
-import GlobalStyles from './components/GlobalStyles';
+import GlobalStyles from './components/GlobalStyle';
 
 
 const App = () => {
